@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter';
+}
+.wrapper {
+    display: flex;
+}
+.heart {
+    margin-top: 300px;
+    margin-left: 80px;
+    width: 79px;
+    height: 79px;
+    background-color: black; 
+    transform: rotate(45deg);
+    position: relative;
+    transition: .5s ease;
+    left: 0%;
+}
+.heart::before,
+.heart::after {
+    content : '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    transition: .5s ease;
+}
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+.heart::after {
+    top: 0;
+    left: -50px;
+}
+
+.active::after{
+    background-color: red;
+}
+.active2::before{
+    background-color: red;
+}
